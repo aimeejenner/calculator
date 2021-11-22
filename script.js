@@ -36,3 +36,18 @@
           }
       })
   })
+
+   operators.forEach((operator) => {
+      operator.addEventListener("click", (event) => {
+         if (firstNumber && secondNumber && chosenOperator) {
+            handleCalculate();
+            clearScreen();
+            firstNumber = result;
+            chosenOperator = event.target.value;
+            display.innerHTML = firstNumber + " " + chosenOperator;
+         } else {
+            chosenOperator = event.target.value;
+            display.innerHTML += " " + chosenOperator;
+         }
+      })
+   })
