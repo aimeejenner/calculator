@@ -13,3 +13,26 @@
    let decimalExistsFirstNo = false;
    let decimalExistsSecondNo = false;
    let calculated = false;
+
+    
+   // EVENT LISTENERS
+
+    numbers.forEach((number) => {
+      number.addEventListener("click", (event) => {
+          if (calculated == true) {
+              clearScreen();
+          } if (firstNumber == "") {
+              firstNumber = event.target.value;
+              display.innerHTML = firstNumber;
+          } else if (chosenOperator == "") {
+              firstNumber = firstNumber + event.target.value;
+              display.innerHTML = firstNumber;
+          } else if (secondNumber =="") {
+              secondNumber = event.target.value;
+              display.innerHTML = `${firstNumber} ${chosenOperator} ${secondNumber}`;
+          } else {
+              secondNumber = secondNumber + event.target.value;
+              display.innerHTML = `${firstNumber} ${chosenOperator} ${secondNumber}`;
+          }
+      })
+  })
