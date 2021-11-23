@@ -32,3 +32,24 @@
   border: 2px solid gray;
   border-radius: 10px;
 }
+
+#equals {
+  grid-area: equals;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+}
+
+#clear, #decimal {
+  background-color: palevioletred;
+  border-radius: 10px;
+}
+
+.operator {
+  background-color: lightgreen;
+  border-radius: 10px;
+}
+
+.number {
+  background-color: lightyellow;
+  border-radius: 10px;
+}
