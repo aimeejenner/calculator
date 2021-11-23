@@ -80,3 +80,27 @@
                 display.innerHTML = secondNumber;
             }
     })
+
+
+    // FUNCTIONS
+
+    const handleCalculate = () => {
+            if (firstNumber && secondNumber && chosenOperator) {
+                switch (chosenOperator) {
+                    case "+":
+                        result = Number(firstNumber) + Number(secondNumber);
+                        break;
+                    case "-":
+                        result = Number(firstNumber) - Number(secondNumber);
+                        break;
+                    case "*":
+                        result = Number(firstNumber) * Number(secondNumber);
+                        break;
+                    case "/":
+                        result = Number(firstNumber) / Number(secondNumber);      
+            }
+
+            display.innerHTML = result;
+            calculated = true;
+        }
+    }

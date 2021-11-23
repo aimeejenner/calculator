@@ -75,4 +75,28 @@ decimal.addEventListener("click", function (event) {
     decimalExistsSecondNo = true;
     display.innerHTML = secondNumber;
   }
-});
+}); // FUNCTIONS
+
+var handleCalculate = function handleCalculate() {
+  if (firstNumber && secondNumber && chosenOperator) {
+    switch (chosenOperator) {
+      case "+":
+        result = Number(firstNumber) + Number(secondNumber);
+        break;
+
+      case "-":
+        result = Number(firstNumber) - Number(secondNumber);
+        break;
+
+      case "*":
+        result = Number(firstNumber) * Number(secondNumber);
+        break;
+
+      case "/":
+        result = Number(firstNumber) / Number(secondNumber);
+    }
+
+    display.innerHTML = result;
+    calculated = true;
+  }
+};
