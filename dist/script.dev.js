@@ -100,3 +100,13 @@ var handleCalculate = function handleCalculate() {
     calculated = true;
   }
 };
+
+var clearScreen = function clearScreen() {
+  firstNumber = "";
+  secondNumber = "";
+  chosenOperator = "";
+  decimalExistsFirstNo = false;
+  decimalExistsSecondNo = false;
+  calculated = false;
+  display.innerHTML = "0";
+};

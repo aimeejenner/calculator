@@ -104,3 +104,13 @@
             calculated = true;
         }
     }
+
+    const clearScreen = () => {
+        firstNumber = "";
+        secondNumber = "";
+        chosenOperator = "";
+        decimalExistsFirstNo = false;
+        decimalExistsSecondNo = false;
+        calculated = false;
+        display.innerHTML = "0";
+  }
