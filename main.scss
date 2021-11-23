@@ -22,3 +22,13 @@
       "equals equals equals equals";
     gap: 10px;
 }
+
+#display {
+  grid-area: display;
+  background-color: lightgrey;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 20px;
+  border: 2px solid gray;
+  border-radius: 10px;
+}
