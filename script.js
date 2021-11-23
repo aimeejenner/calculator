@@ -37,7 +37,7 @@
       })
   })
 
-   operators.forEach((operator) => {
+    operators.forEach((operator) => {
       operator.addEventListener("click", (event) => {
          if (firstNumber && secondNumber && chosenOperator) {
             handleCalculate();
@@ -50,4 +50,33 @@
             display.innerHTML += " " + chosenOperator;
          }
       })
-   })
+  })
+
+    equals.addEventListener("click", (event) => {
+      event.preventDefault();
+      handleCalculate();
+  })
+
+    clear.addEventListener("click", (event) => {
+        clearScreen();
+  })
+
+    decimal.addEventListener("click", (event) => {
+            if (decimalExistsFirstNo == false && firstNumber == "") {
+                firstNumber = "0.";
+                decimalExistsFirstNo = true;
+                display.innerHTML = firstNumber;
+            } else if (decimalExistsFirstNo == false && chosenOperator == "") {
+                firstNumber = firstNumber + ".";
+                decimalExistsFirstNo = true;
+                display.innerHTML = firstNumber;
+            } else if (chosenOperator != "" && decimalExistsSecondNo == false && secondNumber == "") {
+                secondNumber = "0.";
+                decimalExistsSecondNo = true;
+                display.innerHTML = secondNumber;
+            } else if (chosenOperator != "" && decimalExistsSecondNo == false) {
+                secondNumber = secondNumber + ".";
+                decimalExistsSecondNo = true;
+                display.innerHTML = secondNumber;
+            }
+    })
