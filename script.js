@@ -12,14 +12,14 @@
    let result = "";
    let decimalExistsFirstNo = false;
    let decimalExistsSecondNo = false;
-   let calculated = false;
+   let equalsPressed = false;
 
     
    // EVENT LISTENERS
 
     numbers.forEach((number) => {
       number.addEventListener("click", (event) => {
-          if (calculated == true) {
+          if (equalsPressed == true) {
               clearScreen();
           } if (firstNumber == "") {
               firstNumber = event.target.value;
@@ -45,7 +45,7 @@
             firstNumber = result;
             chosenOperator = event.target.value;
             display.innerHTML = firstNumber + " " + chosenOperator;
-         } else {
+         } else if (chosenOperator == "") {
             chosenOperator = event.target.value;
             display.innerHTML += " " + chosenOperator;
          }
@@ -101,7 +101,7 @@
             }
 
             display.innerHTML = result;
-            calculated = true;
+            equalsPressed = true;
         }
     }
 
@@ -111,6 +111,6 @@
         chosenOperator = "";
         decimalExistsFirstNo = false;
         decimalExistsSecondNo = false;
-        calculated = false;
+        equalsPressed = false;
         display.innerHTML = "0";
   }

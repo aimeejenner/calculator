@@ -13,11 +13,11 @@ var chosenOperator = "";
 var result = "";
 var decimalExistsFirstNo = false;
 var decimalExistsSecondNo = false;
-var calculated = false; // EVENT LISTENERS
+var equalsPressed = false; // EVENT LISTENERS
 
 numbers.forEach(function (number) {
   number.addEventListener("click", function (event) {
-    if (calculated == true) {
+    if (equalsPressed == true) {
       clearScreen();
     }
 
@@ -44,7 +44,7 @@ operators.forEach(function (operator) {
       firstNumber = result;
       chosenOperator = event.target.value;
       display.innerHTML = firstNumber + " " + chosenOperator;
-    } else {
+    } else if (chosenOperator == "") {
       chosenOperator = event.target.value;
       display.innerHTML += " " + chosenOperator;
     }
@@ -97,7 +97,7 @@ var handleCalculate = function handleCalculate() {
     }
 
     display.innerHTML = result;
-    calculated = true;
+    equalsPressed = true;
   }
 };
 
@@ -107,6 +107,6 @@ var clearScreen = function clearScreen() {
   chosenOperator = "";
   decimalExistsFirstNo = false;
   decimalExistsSecondNo = false;
-  calculated = false;
+  equalsPressed = false;
   display.innerHTML = "0";
 };
