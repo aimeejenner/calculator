@@ -1,4 +1,4 @@
-# JS Calculator
+# Calculator
 
 ### A calculator built using HTML, SCSS and Javascript.
 

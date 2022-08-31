@@ -96,7 +96,7 @@ var handleCalculate = function handleCalculate() {
         result = Number(firstNumber) / Number(secondNumber);
     }
 
-    display.innerHTML = result;
+    display.innerHTML = Number(result.toFixed(10));
     equalsPressed = true;
   }
 };
